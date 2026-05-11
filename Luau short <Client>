@@ -1,0 +1,57 @@
+-- This is still under development in the future.
+-- Only everything that needs to be explained is explained here.
+
+Services {
+
+  ReplicatedStorage = game:GetService("ReplicatedStorage");
+	ReplicatedFirst = game:GetService("ReplicatedFirst");
+	Lighting = game:GetService("Lighting");
+	NetworkClient = game:GetService("NetworkClient");
+	TweenService = game:GetService("TweenService");
+	MarketplaceService = game:GetService("MarketplaceService");
+	MaterialService = game:GetService("MaterialService");
+	_Workspace = game:GetService("Workspace");
+	Players = game:GetService("Players");
+	RunService = game:GetService("RunService");
+	StarterPack = game:GetService("StarterPack");
+	StarterPlayer = game:GetService("StarterPlayer");
+	Teams = game:GetService("Teams");
+	SoundService = game:GetService("SoundService");
+	TextChatService = game:GetService("TextChatService"); 
+
+}
+
+----------------------------------------------------------
+
+for some properties like plr from the luau module you must use : "colon" Exmaple plr:Position
+
+Player {
+
+  plr = module.Init(game.Players.LocalPlayer); -- Example's -- | <Luau.plr:GetHumanoid()> It does just what it says instead of game.players.LocalPlayer.Character.Humanoid | <Luau.plr:GetHumanoidRootPart> <>
+	PlayerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui"); -- Anything within PlayerGui just like you would normally map only u can now type luau.PlayerGui<Anything> instead of game.players.LocalPlayer.PlayerGui
+
+}
+
+----------------------------------------------------------
+
+-- How it should look in the localscript or Module 
+--Example
+local repli = game:GetService("ReplicatedStorage"):WaitForChild("Plugins").Util.M_Utils
+local Luau = require(repli.ClientUtils.Luau)      
+
+local hum = Luau.plr:GetHumanoid() -- You can do this in many ways, but an error message will appear if it is not coded correctly. 
+
+----------------------------------------------------------
+
+about :anything -- This is exactly the same as manually mapping to an instance or a property, but now you start right at the point you are looking for.
+
+
+
+
+
+
+
+
+
+
+
